@@ -25,11 +25,18 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <groupId>io.fabric8</groupId>
+        <artifactId>kubernetes-client-bom</artifactId>
+        <version>${fabric8-client.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-bom</artifactId>
         <version>${quarkus.version}</version>
         <type>pom</type>
-	    <scope>import</scope>
+        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -45,9 +52,18 @@
       <version>${fabric8-client.version}</version>
     </dependency>
     <dependency>
+      <groupId>io.fabric8</groupId>
+      <artifactId>kubernetes-model-common</artifactId>
+    </dependency>
+    <dependency>
       <groupId>io.javaoperatorsdk</groupId>
       <artifactId>operator-framework</artifactId>
       <version>${java-sdk.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-container-image-jib</artifactId>
+      <version>${quarkus.version}</version>
     </dependency>
   </dependencies>
 
